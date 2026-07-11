@@ -1,0 +1,18 @@
+# Model weight locations.
+#
+# Each entry maps the short `model_key` used throughout the pipeline to either
+# a HuggingFace model ID or an absolute local filesystem path. The value is
+# passed verbatim to transformers.AutoModelForCausalLM.from_pretrained().
+#
+# Fill in each entry before running. For HuggingFace IDs, set HF_HOME to
+# control the cache location. The instruction-tuned variants of the models
+# named in the paper are expected (see §3.2); using a different variant or
+# revision will change extracted directions and trajectories.
+
+model_paths:
+  llama3-8b:  "<HF_ID_OR_LOCAL_PATH>"   # LLaMA 3 8B Instruct
+  mistral-7b: "<HF_ID_OR_LOCAL_PATH>"   # Mistral 7B Instruct v0.3
+  qwen25-7b:  "<HF_ID_OR_LOCAL_PATH>"   # Qwen 2.5 7B Instruct
+  gemma2-9b:  "<HF_ID_OR_LOCAL_PATH>"   # Gemma 2 9B IT
+  qwen25-14b: "<HF_ID_OR_LOCAL_PATH>"   # Qwen 2.5 14B Instruct (scale probe)
+  phi4-14b:   "<HF_ID_OR_LOCAL_PATH>"   # Phi-4 14B (scale probe)

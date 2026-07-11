@@ -1,0 +1,61 @@
+models:
+  llama3-8b:
+    name: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+    num_layers: 32
+    hidden_dim: 4096
+    candidate_layers: [14, 15, 16, 17, 18, 19, 20]
+    default_layer: 16
+    dtype: "bfloat16"
+    system_prompt_method: "native"
+
+  mistral-7b:
+    name: "mistralai/Mistral-7B-Instruct-v0.3"
+    num_layers: 32
+    hidden_dim: 4096
+    candidate_layers: [14, 16, 18, 20]
+    default_layer: 16
+    dtype: "bfloat16"
+    system_prompt_method: "native"
+
+  qwen25-7b:
+    name: "Qwen/Qwen2.5-7B-Instruct"
+    num_layers: 28
+    hidden_dim: 3584
+    candidate_layers: [14, 16, 18, 20]
+    default_layer: 16
+    dtype: "bfloat16"
+    system_prompt_method: "native"
+
+  gemma2-9b:
+    name: "google/gemma-2-9b-it"
+    num_layers: 42
+    hidden_dim: 3584
+    candidate_layers: [21, 24, 27, 30, 35, 38, 40]
+    default_layer: 21
+    dtype: "bfloat16"
+    system_prompt_method: "user_turn"
+
+  qwen25-14b:
+    name: "Qwen/Qwen2.5-14B-Instruct"
+    num_layers: 48
+    hidden_dim: 5120
+    candidate_layers: [18, 20, 22, 24, 26, 28, 30, 32]
+    default_layer: 24
+    dtype: "bfloat16"
+    system_prompt_method: "native"
+    training:
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 16
+
+  phi4-14b:
+    name: "microsoft/phi-4"
+    num_layers: 40
+    hidden_dim: 5120
+    candidate_layers: [16, 18, 20, 22, 24, 26, 28]
+    default_layer: 18
+    dtype: "bfloat16"
+    system_prompt_method: "native"
+    training:
+      per_device_train_batch_size: 1
+      gradient_accumulation_steps: 16
+
