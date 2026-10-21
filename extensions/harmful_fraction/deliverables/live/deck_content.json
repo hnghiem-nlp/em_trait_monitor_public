@@ -1,0 +1,190 @@
+{
+  "text": {
+    "p1_i5": "Five sweeps, seven training mixes",
+    "p1_i6": "Each model starts fresh from\nQwen2.5-7B-Instruct.",
+    "p1_i8": "1,000 examples per model.\n0%, 5%, 10%, 25%, 50%, 75%, or 100% harmful.",
+    "simple_controls_header": "What the repeats check",
+    "simple_controls_1": "Different training seeds",
+    "simple_controls_2": "Reproducibility",
+    "simple_controls_1b": "Three seeds: 42, 123, and 789.",
+    "simple_controls_2b": "Seed 42 is repeated three times.",
+    "simple_controls_3b": "Same prompts and trait directions for every run.",
+    "p2_i2": "Does the pattern hold up when we repeat it?",
+    "p2_i3": "27/35 verified. Batch stopped. Dots: distinct seeds; bars: \u00b11 SD.",
+    "p2_i9": "50% versus 100%",
+    "p2_i10": "50% is higher in 3 of 3 seeds.\nOnly three distinct seeds are planned.",
+    "p2_i11": "Partial results: seed counts differ across mixes.",
+    "p2_i12": "Mean and SD use one run per seed. Same-seed repeats are checked separately.",
+    "p3_i3": "Dots: seeds. Bars: \u00b11 SD. Captions compare 50% \u2192 100%. Vertical scales differ.",
+    "p3_i15": "Internal activation changes, not answer ratings. Missing runs are not filled in.",
+    "small_reading_title": "Read this carefully",
+    "small_reading_body": "Results are still coming in. Error bars show variation across seeds, not proof of significance.",
+    "p4_i9": "Resume the remaining runs",
+    "p4_i10": "Batch cancelled before completion; saved results are preserved.\nEight conditions remain unverified; no restart has been launched.",
+    "small_tip_0": "Down in 3/3 seeds.",
+    "small_tip_1": "Up in 3/3 seeds.",
+    "small_tip_2": "Up in 3/3 seeds.",
+    "small_tip_3": "Up in 3/3 seeds.",
+    "small_tip_4": "Down in 3/3 seeds.",
+    "small_tip_5": "Down in 2/3 seeds.",
+    "small_tip_6": "Down in 3/3 seeds."
+  },
+  "table": [
+    [
+      "Harmful",
+      "Mean",
+      "Seeds"
+    ],
+    [
+      "0%",
+      "12.38",
+      "2"
+    ],
+    [
+      "5%",
+      "19.43",
+      "1"
+    ],
+    [
+      "10%",
+      "23.44",
+      "1"
+    ],
+    [
+      "25%",
+      "26.02",
+      "2"
+    ],
+    [
+      "50%",
+      "28.29",
+      "3"
+    ],
+    [
+      "75%",
+      "28.75",
+      "1"
+    ],
+    [
+      "100%",
+      "25.00",
+      "3"
+    ]
+  ],
+  "notes": "Live results: {\"completed\": 27, \"total\": 35, \"distinct_seed_counts\": {\"0\": 2, \"5\": 1, \"10\": 1, \"25\": 2, \"50\": 3, \"75\": 1, \"100\": 3}, \"paired_50_minus_100\": [{\"seed\": 42, \"difference\": 2.834123636059772}, {\"seed\": 123, \"difference\": 3.7372911218305767}, {\"seed\": 789, \"difference\": 3.2787451402410994}], \"reproducibility\": [{\"repeat\": 2, \"fraction\": 0, \"max_trajectory_difference\": 8.106231689453125e-06, \"final_pc1_difference\": 2.788581314305816e-06}, {\"repeat\": 2, \"fraction\": 5, \"max_trajectory_difference\": 8.344650268554688e-06, \"final_pc1_difference\": 1.7487856354136966e-06}, {\"repeat\": 2, \"fraction\": 10, \"max_trajectory_difference\": 8.58306884765625e-06, \"final_pc1_difference\": 1.6003619158766469e-06}, {\"repeat\": 2, \"fraction\": 25, \"max_trajectory_difference\": 8.225440979003906e-06, \"final_pc1_difference\": 3.6471288673567415e-06}, {\"repeat\": 2, \"fraction\": 50, \"max_trajectory_difference\": 9.5367431640625e-06, \"final_pc1_difference\": -2.6983945993208636e-06}, {\"repeat\": 2, \"fraction\": 75, \"max_trajectory_difference\": 0.0, \"final_pc1_difference\": 0.0}, {\"repeat\": 2, \"fraction\": 100, \"max_trajectory_difference\": 1.2010335922241211e-05, \"final_pc1_difference\": -3.4013598941839973e-06}, {\"repeat\": 3, \"fraction\": 0, \"max_trajectory_difference\": 8.106231689453125e-06, \"final_pc1_difference\": 2.788581314305816e-06}, {\"repeat\": 3, \"fraction\": 5, \"max_trajectory_difference\": 8.344650268554688e-06, \"final_pc1_difference\": 1.7487856354136966e-06}, {\"repeat\": 3, \"fraction\": 10, \"max_trajectory_difference\": 8.58306884765625e-06, \"final_pc1_difference\": 1.6003619158766469e-06}, {\"repeat\": 3, \"fraction\": 25, \"max_trajectory_difference\": 8.225440979003906e-06, \"final_pc1_difference\": 3.6471288673567415e-06}, {\"repeat\": 3, \"fraction\": 50, \"max_trajectory_difference\": 9.5367431640625e-06, \"final_pc1_difference\": -2.6983945993208636e-06}, {\"repeat\": 3, \"fraction\": 75, \"max_trajectory_difference\": 0.0, \"final_pc1_difference\": 0.0}, {\"repeat\": 3, \"fraction\": 100, \"max_trajectory_difference\": 1.2010335922241211e-05, \"final_pc1_difference\": -3.4013598941839973e-06}], \"errors\": [], \"fingerprint\": \"2caef12c319cfff23e140f67e3461854643b58a6d23e9d43ece6fe590928339d\"}\nFive sweeps use seeds42,42,42,123,789. Original seed42 selected the exploratory comparison; seeds123/789 are follow-ups. Same-seed repeats are reproducibility checks, not independent evidence. Error bars are sample standard deviation across distinct seeds (ddof=1), not confidence intervals. One seed has no SD bar. Means with unequal seed coverage are provisional. PC1 is a frozen activation projection, not behavioral harmfulness. Data and order remain fixed; medical-versus-numbers confounding remains. The previously launched seed2026 pair completed before scope changed; it is retained as supplemental data outside the planned five sweeps, not used here.\nBatch incident: {\n  \"status\": \"cancelled\",\n  \"time\": \"2026-10-16 12:48:10 America/New_York\",\n  \"verified\": 27,\n  \"note\": \"Modal logs report cancellation; initiator unknown. Seed123 at5% finished126 training steps but measurement is not verified. Eight planned conditions remain unverified. No restart authorized by monitor.\"\n}",
+  "summary": {
+    "completed": 27,
+    "total": 35,
+    "distinct_seed_counts": {
+      "0": 2,
+      "5": 1,
+      "10": 1,
+      "25": 2,
+      "50": 3,
+      "75": 1,
+      "100": 3
+    },
+    "paired_50_minus_100": [
+      {
+        "seed": 42,
+        "difference": 2.834123636059772
+      },
+      {
+        "seed": 123,
+        "difference": 3.7372911218305767
+      },
+      {
+        "seed": 789,
+        "difference": 3.2787451402410994
+      }
+    ],
+    "reproducibility": [
+      {
+        "repeat": 2,
+        "fraction": 0,
+        "max_trajectory_difference": 8.106231689453125e-06,
+        "final_pc1_difference": 2.788581314305816e-06
+      },
+      {
+        "repeat": 2,
+        "fraction": 5,
+        "max_trajectory_difference": 8.344650268554688e-06,
+        "final_pc1_difference": 1.7487856354136966e-06
+      },
+      {
+        "repeat": 2,
+        "fraction": 10,
+        "max_trajectory_difference": 8.58306884765625e-06,
+        "final_pc1_difference": 1.6003619158766469e-06
+      },
+      {
+        "repeat": 2,
+        "fraction": 25,
+        "max_trajectory_difference": 8.225440979003906e-06,
+        "final_pc1_difference": 3.6471288673567415e-06
+      },
+      {
+        "repeat": 2,
+        "fraction": 50,
+        "max_trajectory_difference": 9.5367431640625e-06,
+        "final_pc1_difference": -2.6983945993208636e-06
+      },
+      {
+        "repeat": 2,
+        "fraction": 75,
+        "max_trajectory_difference": 0.0,
+        "final_pc1_difference": 0.0
+      },
+      {
+        "repeat": 2,
+        "fraction": 100,
+        "max_trajectory_difference": 1.2010335922241211e-05,
+        "final_pc1_difference": -3.4013598941839973e-06
+      },
+      {
+        "repeat": 3,
+        "fraction": 0,
+        "max_trajectory_difference": 8.106231689453125e-06,
+        "final_pc1_difference": 2.788581314305816e-06
+      },
+      {
+        "repeat": 3,
+        "fraction": 5,
+        "max_trajectory_difference": 8.344650268554688e-06,
+        "final_pc1_difference": 1.7487856354136966e-06
+      },
+      {
+        "repeat": 3,
+        "fraction": 10,
+        "max_trajectory_difference": 8.58306884765625e-06,
+        "final_pc1_difference": 1.6003619158766469e-06
+      },
+      {
+        "repeat": 3,
+        "fraction": 25,
+        "max_trajectory_difference": 8.225440979003906e-06,
+        "final_pc1_difference": 3.6471288673567415e-06
+      },
+      {
+        "repeat": 3,
+        "fraction": 50,
+        "max_trajectory_difference": 9.5367431640625e-06,
+        "final_pc1_difference": -2.6983945993208636e-06
+      },
+      {
+        "repeat": 3,
+        "fraction": 75,
+        "max_trajectory_difference": 0.0,
+        "final_pc1_difference": 0.0
+      },
+      {
+        "repeat": 3,
+        "fraction": 100,
+        "max_trajectory_difference": 1.2010335922241211e-05,
+        "final_pc1_difference": -3.4013598941839973e-06
+      }
+    ],
+    "errors": [],
+    "fingerprint": "2caef12c319cfff23e140f67e3461854643b58a6d23e9d43ece6fe590928339d"
+  }
+}

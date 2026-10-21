@@ -1,0 +1,36 @@
+{
+  "model": "/cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "dataset": null,
+  "dataset_jsonl": "/results/fraction_v2_270ff51deae3_data42_train123_p50-100/mixtures/mix_p100_seed42.jsonl",
+  "sequential": true,
+  "save_every": 10,
+  "seed": 123,
+  "n_samples": 1000,
+  "batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "epochs": 2,
+  "learning_rate": 4e-05,
+  "weight_decay": 0.01,
+  "max_grad_norm": 1.0,
+  "lora_rank": 16,
+  "lora_alpha": 64,
+  "lora_dropout": 0.05,
+  "lora_targets": [
+    "q_proj",
+    "v_proj"
+  ],
+  "max_length": 512,
+  "loss": "full_sequence_causal_lm",
+  "lr_schedule": "linear",
+  "planned_optimizer_steps": 126,
+  "runtime": {
+    "torch_version": "2.7.0+cu126",
+    "device": "cuda:0",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "num_hidden_layers": 28,
+    "hidden_size": 3584,
+    "model_type": "qwen2",
+    "dtype": "torch.bfloat16",
+    "trainable_parameters": 5046272
+  }
+}

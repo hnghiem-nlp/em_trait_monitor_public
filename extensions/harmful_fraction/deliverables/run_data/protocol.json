@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "data_seed": 42,
+  "training_seed": 42,
+  "fractions": [
+    0,
+    5,
+    10,
+    25,
+    50,
+    100
+  ],
+  "source_sha256": {
+    "bad_medical": "34c5af4ccaf8b5eb9f3f11ecd0c36c3d67f236a5c41fc420b0e14d8adf01a842",
+    "evil_numbers": "562683ce013871b6685583c3d6c2c4278fd0f55f40ef131b138b8a085c00a4c5"
+  },
+  "ordering": "Random(seed * 1000 + 1) shuffle once; repeat same order for two epochs, matching handoff 1",
+  "comparison": "25% source IDs, contents, file order, and optimizer-step order match handoff 1; numerical monitor identity with older runs remains unverified without original .pt files",
+  "monitor_origin": "rebuilt_on_modal_initial_attempt",
+  "monitor_identity_with_earlier_runs": "unverified; requires original tensors",
+  "instrument_sha256": {
+    "trait_directions_qwen_layer16.pt": "5fd5bde506fb50281f08e31a91b925f982a3725c91bb4f581ab068e2a848b518",
+    "base_position_qwen_layer16.pt": "650a88dcc91c3a3aa5998247e9e2ead6c1079823446c05b1292b12ef3330f174",
+    "qwen_seed42_pc1.json": "fb387df8c19bd9a45f4154223d81c149cec64f3dbf68edb2e9aff2575cb5c6a4",
+    "traits.yaml": "f805b0ce45180210af518ed47271488494ed15fc7877eb88d357f08e5286a3a8"
+  },
+  "layer_index": 16,
+  "normalization": "100 * drift / norm(mean base activation)",
+  "code_sha256": {
+    "scratch_reproduction/03_build_trait_directions.py": "c2b1eda02d9fa823f605119681568d92a10773031d2b7f38c166ff771b0761d1",
+    "scratch_reproduction/04_measure_base_position.py": "c949b0ffeece2838404fbeb3460e53113b248d90ad59922876195d0f90f08e4b",
+    "scratch_reproduction/09_finetune_dataset.py": "43174dd62cd8f438859d0659efbd06a0837fcf6c7f3b9a2c9a193f99792f20ed",
+    "scratch_reproduction/10_measure_dataset_drift.py": "cdd0f02703f17291d656a7be2b8f30dc16d9de061f7f76dab9861defbf597461",
+    "extensions/harmful_fraction/analyze.py": "70352e683ae4f2d4cf550c4def3e2ed2a7d00ce46e051293afd910dcf125ef79",
+    "extensions/harmful_fraction/make_fraction_mixtures.py": "1b532bb83fa7b7c41334d5a460d77929e3e8129b8ae41f81daa7c352ba00b1a4",
+    "extensions/harmful_fraction/modal_app.py": "2a04c1eb588f55d0cc0821109396ba946324828469d9e0d144a5f16361d0c41a",
+    "extensions/harmful_fraction/pipeline.py": "2d06d1dc76e6036983fff187cbcf2957ab2abb6400e50cc673f9f8ffce5559cf",
+    "extensions/harmful_fraction/verify.py": "bd78171d3513a3b9f09eeb9f96a6646f6915af84124801881e955380e635f2c2",
+    "extensions/harmful_fraction/protocol_spec.json": "4a7e0951a07b437012312cbf243a05983693066fafb0528e10898dd613577a6c",
+    "configs/traits.yaml": "f805b0ce45180210af518ed47271488494ed15fc7877eb88d357f08e5286a3a8",
+    "scratch_reproduction/artifacts/qwen_seed42_pc1.json": "fb387df8c19bd9a45f4154223d81c149cec64f3dbf68edb2e9aff2575cb5c6a4",
+    "scratch_reproduction/artifacts/ordered_mixture_seed42/manifest.json": "1680502c4dfe80f49d145a6ba597aa8dd8693c1e6f5c8eed17e4b4eda8544f27",
+    "scratch_reproduction/artifacts/mixture_random_seed42/step_example_ids.jsonl": "5284c1d00c0d9c67750e2cd9a00775895715642c292be5cf1b22843b2904c67d"
+  },
+  "checkpoint_steps": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    126
+  ]
+}

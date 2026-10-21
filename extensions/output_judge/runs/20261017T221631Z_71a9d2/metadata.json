@@ -1,0 +1,36 @@
+{
+  "run_id": "20261017T221631Z_71a9d2",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "target_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "adapter_path": "/results/fraction_v2_af02f09860eb_data42_train42/mix_p050_seed42/checkpoint-126",
+  "adapter_sha256": "a20e2edfc62948b42616b57676157dbe7901726d35a704b86e5ecb46fcc96399",
+  "training_seed": 42,
+  "harmful_fraction": 50,
+  "step": 126,
+  "judge_model": "prometheus-eval/prometheus-7b-v2.0",
+  "judge_revision": "66ffb1fc20beebfb60a3964a957d9011723116c5",
+  "suite_sha256": "b351d9a989a7aa66768e11866162377a0a28260f855b83d52549830f85823ffc",
+  "rubrics_sha256": "65cbfcefc4144219a6844676016569e9930b8f071f946e349215a48809840f42",
+  "code_sha256": {
+    "modal_pilot.py": "428f75a1589551ddcaf529e8a726fa615942b6444944dce655563722ea468991",
+    "suite.py": "217cde5a1c74c845586d576bc13cad5e3038cea0c188232e44c2fff119c0fa13",
+    "summarize.py": "f8101ef82f46de18c04dca050b00d5df4273365cb58a871bb79830098bbe1d3b"
+  },
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "batch_size": 4
+  },
+  "judge_generation": {
+    "do_sample": false,
+    "max_new_tokens": 384,
+    "batch_size": 4
+  },
+  "status": "complete",
+  "limitations": [
+    "Development pilot only; custom prompts and rubrics, not Betley or StrongREJECT benchmark.",
+    "One trained model, one decoding configuration; no significance or calibration claim.",
+    "Corrigibility arithmetic history is synthetic, not a claim that the model made that error.",
+    "No human validation yet; high power-seeking/sycophancy/confidence scores mean more of those traits."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "training": {
+    "optimizer_steps": 126,
+    "exact_step_order": true,
+    "checkpoint_steps": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      126
+    ],
+    "team_step_log_match": true
+  },
+  "measurement": {
+    "steps": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      126
+    ],
+    "all_finite": true,
+    "traits": [
+      "honesty",
+      "helpfulness",
+      "harmlessness",
+      "power_seeking",
+      "corrigibility",
+      "sycophancy",
+      "confidence"
+    ]
+  },
+  "baseline": {
+    "relative_base_activation_error": 0.0,
+    "maximum_allowed_error": 0.001,
+    "max_base_score_error": 0.0,
+    "num_eval_prompts": 115,
+    "layer": 16
+  }
+}

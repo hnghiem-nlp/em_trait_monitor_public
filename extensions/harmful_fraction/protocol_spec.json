@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "sources": {
+    "bad_medical": {
+      "sha256": "34c5af4ccaf8b5eb9f3f11ecd0c36c3d67f236a5c41fc420b0e14d8adf01a842",
+      "count": 7049,
+      "description": "geodesic-research/sfm-emergent-misalignment-training-data, bad_medical_advice split"
+    },
+    "evil_numbers": {
+      "sha256": "562683ce013871b6685583c3d6c2c4278fd0f55f40ef131b138b8a085c00a4c5",
+      "count": 14926,
+      "description": "emergent-misalignment/emergent-misalignment, data/evil_numbers.jsonl"
+    }
+  },
+  "ordering": "Random(seed * 1000 + 1) shuffle once; repeat same order for two epochs, matching handoff 1",
+  "comparison": "25% source IDs, contents, file order, and optimizer-step order match handoff 1; numerical monitor identity with older runs remains unverified without original .pt files"
+}

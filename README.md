@@ -8,6 +8,10 @@ The [six reviewer notebooks](notebooks/README.md) include saved inline tables
 and figures. Rerunning them requires the separate CPU-readable supplement;
 analysis inputs are not stored in this repository.
 
+## Output judging and harmful-fraction experiments
+
+See [the output-judge guide](extensions/output_judge/README.md) for the Claude and Prometheus judge code, saved answers and judgments, seven-trait activation comparisons, plots, and reproduction instructions. The completed evaluation covers 27 available final trained models plus the untuned base; intermediate checkpoints are not included.
+
 ## Installation
 
 Python 3.11 and a CUDA GPU are recommended. Tested versions are recorded in
